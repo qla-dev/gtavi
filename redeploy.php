@@ -138,7 +138,7 @@ $npmCommand = escapeshellarg($npm);
 $commands = [
     ['label' => 'Cleaning untracked files', 'command' => 'git checkout -- . && git clean -fd'],
     ['label' => 'Pulling latest GTA VI code', 'command' => 'git pull --ff-only'],
-    ['label' => 'Installing dependencies', 'command' => $npmCommand.' install --no-audit --no-fund'],
+    ['label' => 'Installing dependencies', 'command' => $npmCommand.' install --no-audit --no-fund --legacy-peer-deps'],
     ['label' => 'Building GTA VI app', 'command' => $npmCommand.' run build'],
     ['label' => 'Deploying build output', 'command' => 'cp -af dist/. .'],
 ];
