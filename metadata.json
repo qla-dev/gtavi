@@ -1,0 +1,6 @@
+{
+  "name": "GTA VI OS",
+  "description": "Fictional smartphone operating system inspired by GTA VI, Vice City, and Leonida.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
