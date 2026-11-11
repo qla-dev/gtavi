@@ -532,7 +532,7 @@ export const LeonidaMapsApp: React.FC = () => {
           >
             {/* The Actual Yanis v16 / GTADB Basemap Image */}
             <img
-              src="/maps/basemap.webp"
+              src="/gta-vi-ai-companion/maps/basemap.webp"
               alt="GTA VI Leonida Atlas"
               className={`w-full h-full object-cover select-none pointer-events-none transition-all duration-300 ${
                 layerMode === 'satellite'
