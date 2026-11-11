@@ -135,13 +135,11 @@ $currentPath = (string) (getenv('PATH') ?: '/usr/local/bin:/usr/bin:/bin');
 putenv('PATH='.$nodeBinDir.PATH_SEPARATOR.$currentPath);
 $npmCommand = escapeshellarg($npm);
 
-$deployDir = dirname($baseDir, 2).'/public_html/qla.dev/dist/gta-vi-ai-companion';
-
 $commands = [
     ['label' => 'Pulling latest GTA VI code', 'command' => 'git pull --ff-only'],
     ['label' => 'Installing dependencies', 'command' => $npmCommand.' ci --no-audit --no-fund'],
     ['label' => 'Building GTA VI app', 'command' => $npmCommand.' run build'],
-    ['label' => 'Deploying to public directory', 'command' => 'rsync -a --delete dist/ '.escapeshellarg($deployDir).'/'],
+    ['label' => 'Deploying build output', 'command' => 'cp -af dist/. .'],
 ];
 
 $startedAt = time();
