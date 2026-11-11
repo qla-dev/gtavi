@@ -141,6 +141,7 @@ $commands = [
     ['label' => 'Installing dependencies', 'command' => $npmCommand.' install --no-audit --no-fund --legacy-peer-deps'],
     ['label' => 'Building GTA VI app', 'command' => $npmCommand.' run build'],
     ['label' => 'Deploying build output', 'command' => 'cp -af dist/. .'],
+    ['label' => 'Installing .htaccess for SPA routing', 'command' => 'cp -f deploy.htaccess .htaccess'],
 ];
 
 $startedAt = time();
