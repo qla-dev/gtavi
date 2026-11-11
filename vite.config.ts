@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/gta-vi-ai-companion/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
